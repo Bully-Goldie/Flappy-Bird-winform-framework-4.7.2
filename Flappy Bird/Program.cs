@@ -1,0 +1,24 @@
+﻿// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
+
+using System;
+using System.Windows.Forms;
+
+namespace Flappy_Bird
+{
+    internal static class Program
+    {
+        /// <summary>
+        /// Главная точка входа для приложения.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            FontLoader.LoadFont("Flappy_Bird.res.fonts.flappy-font.ttf");
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Main_menu());
+        }
+    }
+}
